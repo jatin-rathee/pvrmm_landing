@@ -1,0 +1,33 @@
+:root {
+    --color-primary: #E65400;
+    --color-grey-dark-1: #252525;
+    --color-grey-dark-2: #222222;
+    --color-grey-light-1: #F2F0E9;
+    --color-grey-light-2: #B7B9BB;
+
+    --shadow-dark:  0 2rem 6rem rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-grey-light-2);
+    overflow-x: hidden;
+}

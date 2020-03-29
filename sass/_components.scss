@@ -1,0 +1,312 @@
+//////////////////////////////////////////////
+// NAVBAR
+
+.navbar {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12rem;
+    padding-top: 2rem;
+
+    &__logo {
+        margin-left: 10rem;
+    }
+
+    &__logo-icon {
+        height: 5rem;
+        width: auto;
+    }
+
+    &__right {
+        margin-right: 10rem;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__item {
+        margin-right: 5rem;
+        padding: 0.5rem 0;
+        border-bottom: 2px solid transparent;
+        transition: all 0.2s;
+
+        &:hover {
+            border-bottom: 2px solid var(--color-primary);
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.75rem;
+        text-transform: uppercase;
+    }
+}
+
+//////////////////////////////////////////////
+// HEADER
+
+.header {
+    // background-color: var(--color-grey-dark-1);
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(./img/photo-3.jpg);
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    position: relative;
+
+    &__content {
+        position: absolute;
+        // width: 70%;
+        top: 50%;
+        left: 25%;
+        transform: translate(-22%, -50%);
+    }
+
+    &__heading {
+        font-size: 6rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        width: 50%;
+        font-weight: 400;
+        line-height: 1.7;
+        letter-spacing: 1px;
+    }
+}
+
+//////////////////////////////////////////////
+// HEADINGS
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        text-transform: uppercase;
+
+        /* 
+        animation-iteration-count: 3; 
+        animation-delay: 3s; 
+        */
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.7rem;
+        animation: moveInRight 1s ease-out;
+    }
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-primary));
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all 0.2s;
+
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba(#000, .2);
+    }
+}
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+//////////////////////////////////////////////
+// PARAGRAPH
+
+.paragraph {
+    font-size: 1.7rem;
+    color: var(--color-grey-dark-2);
+}
+
+
+//////////////////////////////////////////////
+// ABOUT US
+
+.about {
+
+    display: flex;
+    justify-content: space-between;
+
+    .composition {
+        width: 50%;
+        padding: 5rem;
+        margin-top: 5rem;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__content {
+        width: 50%;
+        padding: 3rem;
+        padding-left: 10rem;
+        position: relative;
+        top: -4rem;
+    }
+}
+
+//////////////////////////////////////////////
+// PRODUCTS
+
+.product {
+
+    display: flex;
+    height: 50rem;
+
+    &__heading {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &:hover {
+            transform: skewY(2deg) skewX(15deg) scale(1.1) translateX(-50%);
+        }
+    }
+
+    &__box {
+        flex: 1;
+        transition: all .2s ease-out;
+        
+        &:not(:last-child) {
+            margin-right: 2rem;
+            border-radius: 3px;
+        }
+
+        &--1 {
+            background-image: linear-gradient(rgba(0,0,0, .4), rgba(0,0,0, .4)), url(../css/img/photo-1.jpg);
+            background-size: cover;
+        }
+
+        &--2 {
+            background-image: linear-gradient(rgba(0,0,0, .4), rgba(0,0,0, .4)), url(../css/img/photo-2.jpg);
+            background-size: cover;
+        }
+
+        &--3 {
+            background-image: linear-gradient(rgba(0,0,0, .4), rgba(0,0,0, .4)), url(../css/img/photo-4.jpg);
+            background-size: cover;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &__box:hover > &__text {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+
+    &__text {
+        color: #fff;
+        width: 70%;
+        padding: 0 2rem;
+        margin-top: 80%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100px);
+        transition: all .3s ease-in-out;
+    }
+
+    &__para {
+        margin-top: 2rem;
+    }
+}
+
+//////////////////////////////////////////////
+// SLIDEBAR
+
+
+// #slide {
+//     width: auto;
+//     overflow-x: scroll;
+//     overflow-y: hidden;
+//     white-space: nowrap;
+//     padding: 0 2rem 5rem 2rem;
+
+//     img:not(:last-child) {
+//         margin-right: 5rem;
+//     }
+
+//     img {
+//         width: 30rem;
+//         height: 20rem;
+//     }
+// }
+
+//////////////////////////////////////////////
+// SERVICES
+
+.services-heading {
+    margin: 8rem 0 10rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.services {
+
+    &__box {
+        display: flex;
+    }
+
+    &__icon-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        background-color: var(--color-grey-light-2);
+        &:not(:last-child) {
+            margin-right: 5rem;
+        }
+    }
+
+    &__icon {
+        height: 7.5rem;
+        width: 7.5rem;
+        fill: var(--color-grey-light-1);
+        fill: #fff;
+        margin-top: 5rem;
+    }
+
+    &__text {
+        text-align: justify;
+        padding: 2rem;
+        color: #000;
+        margin-top: 5rem;
+    }
+}
